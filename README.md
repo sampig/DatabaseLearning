@@ -7,7 +7,6 @@ Author: [ZHU, Chenfeng](http://about.me/zhuchenfeng)
 
 * [MySQL](#mysql)
 * [PostgreSQL](#postgresql)
-  * [Installation](#installation)
 * [Cassandra](#cassandra)
 
 
