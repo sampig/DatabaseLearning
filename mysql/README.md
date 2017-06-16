@@ -37,7 +37,7 @@ make install [DESTDIR="/opt/mysql"]
 
 Initialize PostgreSQL:
 ``` shell
-scripts/mysql_install_db
+scripts/mysql_install_db --basedir=path --datadir=path --user=mysql
 bin/mysql_install_db --user=mysql    # MySQL 5.7.5
 bin/mysqld --initialize --user=mysql # MySQL 5.7.6 and up
 bin/mysql_ssl_rsa_setup              # MySQL 5.7.6 and up
@@ -60,9 +60,7 @@ MySQL Workbench is a graphical tool for working with MySQL servers and databases
 
 Start and stop the server:
 ``` shell
-bin/pg_ctl -D [DATA_LOCATION] -l logfile start
-bin/postgres -D [DATA_LOCATION] >logfile 2>&1 &
-kill -INT ‘head -1 [DATA_LOCATION]/postmaster.pid‘
+bin/mysqld_safe --defaults-file=file_name --datadir=dir_name --log-error=file_name --pid-file=file_name&
 ```
 
 ### Backup and Recovery
